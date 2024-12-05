@@ -20,7 +20,7 @@ Steps to Run Penge
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/your-username/penge.git
+git clone https://github.com/enockknox/penge.git
 cd penge
 Install dependencies:
 bash
