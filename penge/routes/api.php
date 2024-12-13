@@ -2,8 +2,18 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\AuthController; // Ensure this matches your controller's namespace
 
-Route::controller(AuthController::class)->group(function() {
+Route::controller(AuthController::class)->group(function () {
     Route::post('/register', 'register')->name('api.auth.register');
-    Route::post('/login', 'login')->name('api.auth.register');
+    Route::post('/login', 'login')->name('api.auth.login');
+    Route::post('/reset/otp', 'resetOtp')->name('api.auth.reset.otp');
+    Route::post('/reset/password', 'resetPassword')->name('api.auth.reset.password');
+
+
+
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::post('/otp', 'otp')->name('api.auth.otp');
+        Route::post('/verify', 'verify')->name('api.auth.verify');
+    });
 });
