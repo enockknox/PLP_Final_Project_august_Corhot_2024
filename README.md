@@ -20,7 +20,7 @@ Steps to Run Penge
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/your-username/penge.git
+git clone https://github.com/enockknox/penge.git
 cd penge
 Install dependencies:
 bash
@@ -56,7 +56,7 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 Contact
 For inquiries or support, contact us at:
-📧 your-email@example.com
+📧 knoxenock@gmail.com
 🌐 Your Website or Project Page
 
 Happy Tracking!
