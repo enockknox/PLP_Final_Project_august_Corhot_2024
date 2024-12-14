@@ -1,8 +1,17 @@
 <x-mail::message>
-<p>Hi{($user->name)},</p>
+Hi{{$user->name}},
+Your 6-digit code is:
+<strong>{{$otp->code}}</strong>
 
-<p>We received a request to verify you account on Penge through your e-mail address. Your verification code  is </p>
+@if($otp->type == 'password_reset')
+<p>Use this code to reset your password in the app.</p>
+@else
+    Use this code to complete the verification process in the app.
+@endif
+
+Do not share this code. Penge representative will never reach out to you to verify this code over SMS.
+<p> Your verification code  is </p>
 Thanks,<br>
-<p><strong>{($code)}</strong></p>
+<strong>The code is valid for 10 minutes.</strong>
 {{ config('app.name') }}
 </x-mail::message>

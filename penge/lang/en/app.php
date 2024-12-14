@@ -22,4 +22,5 @@ return [
     'otp_mail_subject' => 'Your Penge Verification Code'
     'Invalid_otp' => 'Invalid verification code',
     'verification_success' => 'verification Successful!'
+    'password_reset_success' => 'Password Reset Successful!'
 ];
